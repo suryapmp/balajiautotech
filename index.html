@@ -21,6 +21,9 @@
 <link rel="stylesheet" href="assets/css/vendor/spacing.css">
 <link rel="stylesheet" href="assets/css/vendor/remixicon.css">
 <link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
 
 <body class="rs-smoother-yes rtl">
 
@@ -28,7 +31,7 @@
     <!-- preloader start -->
     <div id="pre-load">
         <div id="loader" class="loader">
-            <div class="loader-container has-theme-red">
+            <div class="loader-container has-theme-orange">
                 <div class="loader-icon"><img src="assets/images/favicon-red.png" alt=""></div>
             </div>
         </div>
@@ -55,117 +58,85 @@
                         </div>
                     </div>
                     <div class="rs-header-menu">
-                        <nav id="mobile-menu" class="main-menu">
+                        <nav id="mobile-menu-two" class="main-menu">
                             <ul class="multipage-menu">
                                 <li class="Onepage-menu">
                                     <a href="javascript:void(0)">Home</a>
                                 </li>
                                 <!-- about menu -->
-                                <li class="menu-item-has-children">
-                                    <a href="about.html">About</a>
+                                <li class="Onepage-menu">
+                                    <a href="about.html">About Us</a>
                                 </li>
-                                <!-- page menu -->
-                                <li class="menu-item-has-children">
-                                    <a href="javascript:void(0)">Pages</a>
-                                    <ul class="submenu last-children">
-                                        <li class=" has-arrow">
-                                            <a href="javascript:void(0)">Services</a>
-                                            <ul class="submenu">
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="services-details.html">Services Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class=" has-arrow">
-                                            <a href="javascript:void(0)">Team</a>
-                                            <ul class="submenu">
-                                                <li><a href="team.html">Team</a></li>
-                                                <li><a href="team-details.html">Team Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class=" has-arrow">
-                                            <a href="javascript:void(0)">Project</a>
-                                            <ul class="submenu">
-                                                <li><a href="portfolio.html">Project</a></li>
-                                                <li><a href="portfolio-details.html">Project Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="pricing.html">Pricing Plan</a>
-                                        </li>
-                                        <li class=" has-arrow">
-                                            <a href="shop.html">Shop</a>
-                                            <ul class="submenu">
-                                                <li><a href="shop.html">Product</a></li>
-                                                <li><a href="shop-details.html">Product Details</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="cart.html">Cart</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="faq.html">Faq</a>
-                                        </li>
-                                        <li>
-                                            <a href="appointment.html">Appointment</a>
-                                        </li>
-                                    </ul>
+
+                                <!--  product -->
+                                <li class="proarc-products-menu">
+                                    <a href="products.php" class="proarc-trigger">Products</a>
+                                    <div class="proarc-megamenu-full">
+                                        <div class="proarc-menu-grid">
+                                            <!-- Column 1: CNC Profile Cutting Machines -->
+                                            <div class="proarc-column">
+                                                <h4 class="proarc-title">CNC Profile Cutting Machines</h4>
+                                                <ul>
+                                                    <li><a href="Havis.php">HAVIS - CNC Plasma Cutting Machine</a></li>
+                                                    <li><a href="Shreyas.php">SHREYAS - CNC Pipe Cutting Machine</a>
+                                                    </li>
+                                                    <li><a href="Tejus.php">TEJUS - CNC Flame/Plasma Cutting Machine</a>
+                                                    </li>
+                                                    <li><a href="Tejus-Ecno.php">TEJUS ECNO - CNC Flame/Plasma Cutting
+                                                            Machine</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Column 2: CNC Machine Tools -->
+                                            <div class="proarc-column">
+                                                <h4 class="proarc-title">CNC Machine Tools</h4>
+                                                <ul>
+                                                    <li><a href="rotohead.php">ROTOTHREAD – CNC Thread Milling
+                                                            Machine</a></li>
+                                                    <li><a href="rotodrill.php">ROTODRILL – CNC Plate Drilling
+                                                            Machine</a></li>
+                                                    <li><a href="rotogroove.php">ROTOGROOVE - CNC Internal Grooving
+                                                            Machine</a></li>
+                                                    <li><a href="rotowhirl.php">ROTOWHIRL - CNC Whirling Machine</a>
+                                                    </li>
+                                                    <li><a href="rotoworm.php">ROTOWORM - CNC Worm Milling Machine</a>
+                                                    </li>
+                                                    <li><a href="Deephole.php">ROTODEEP-HOLE - CNC Deep Hole Drilling
+                                                            Machine</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Column 3: Robot Automation + View All -->
+                                            <div class="proarc-column">
+                                                <h4 class="proarc-title">ROBOT AUTOMATION</h4>
+                                                <ul>
+                                                    <li><a href="robot-grinding.php">Grinding</a></li>
+                                                    <li><a href="robot-polishing.php">Polishing</a></li>
+                                                    <li><a href="robot-handling.php">Material Handling</a></li>
+                                                    <li><a href="robot-painting.php">Spray Painting</a></li>
+                                                </ul>
+                                                <div class="proarc-view-all-text">
+                                                    <a href="products.php">View All Products</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- RIGHT CORNER IMAGE -->
+                                        <div class="proarc-corner-image">
+                                            <img src="images/b_images/products/corner-image.jpg" alt="CNC Machines">
+                                        </div>
+                                    </div>
                                 </li>
+
                                 <!-- elements menu -->
-                                <li class="has-mega-menu menu-item-has-children">
-                                    <a href="javascript:void(0)">Elements</a>
-                                    <ul class="mega-menu mega-grid">
-                                        <li>
-                                            <a href="#" class="title">Elements Layout</a>
-                                            <ul>
-                                                <li><a href="elements-features.html">Features</a></li>
-                                                <li><a href="elements-advance-tab.html">Advance Tab</a></li>
-                                                <li><a href="elements-work-process.html">Work Process</a></li>
-                                                <li><a href="elements-counter.html">Counter</a></li>
-                                                <li><a href="elements-gsap.html">GSAP</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="title">Elements Layout</a>
-                                            <ul>
-                                                <li><a href="elements-services.html">Services Box</a></li>
-                                                <li><a href="elements-team.html">Team</a></li>
-                                                <li><a href="elements-pricing.html">Pricing</a></li>
-                                                <li><a href="elements-portfolio.html">Project</a></li>
-                                                <li><a href="#">Coming Soon</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="title">Elements Layout</a>
-                                            <ul>
-                                                <li><a href="elements-services-tab.html">Services Tab</a></li>
-                                                <li><a href="elements-testimonial.html">Testimonials</a></li>
-                                                <li><a href="elements-brand.html">Partner Logo</a></li>
-                                                <li><a href="elements-blog.html">Blog</a></li>
-                                                <li><a href="#">Coming Soon</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <li class="Onepage-menu">
+                                    <a href="javascript:void(0)">Services</a>
                                 </li>
-                                <li class="menu-item-has-children">
+
+                                <li class="Onepage-menu">
                                     <a href="javascript:void(0)">Blog</a>
-                                    <ul class="submenu last-children">
-                                        <li>
-                                            <a href="blog.html">Blog</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-details.html">Blog Details</a>
-                                        </li>
-                                    </ul>
                                 </li>
-                                <li class="menu-item-has-children">
+                                <li class="Onepage-menu">
                                     <a href="contact.html">Contact</a>
-                                    <ul class="submenu last-children">
-                                        <li>
-                                            <a href="contact.html">Contact 01</a>
-                                        </li>
-                                        <li>
-                                            <a href="contact-two.html">Contact 02</a>
-                                        </li>
-                                    </ul>
                                 </li>
                             </ul>
                         </nav>
@@ -173,13 +144,13 @@
                     <div class="rs-header-right">
                         <!-- call start -->
                         <div class="rs-header-call">
-                            <h6><a href="tel:971555961659">Tel. +97 155 596 1659</a></h6>
+                            <h6><a href="tel:+91 94498 61404">Tel. +91 94498 61404</a></h6>
                         </div>
                         <!-- call end -->
 
                         <!-- search start -->
                         <div class="rs-header-search-wrapper">
-                            <div class="rs-header-search-icon has-theme-red">
+                            <div class="rs-header-search-icon has-theme-orange">
                                 <i class="ri-close-fill has-close"></i>
                                 <i class="ri-search-line has-search"></i>
                             </div>
@@ -194,7 +165,7 @@
                         <!-- search end -->
 
                         <!-- sidebar start -->
-                        <div class="rs-header-hamburger has-theme-red">
+                        <div class="rs-header-hamburger has-theme-orange">
                             <div class="sidebar-toggle">
                                 <a class="bar-icon" href="javascript:void(0)">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
@@ -224,310 +195,70 @@
                             <ul class="multipage-menu">
                                 <li class="Onepage-menu">
                                     <a href="javascript:void(0)">Home</a>
-                                    <!-- <ul class="mega-menu mega-grid-two">
-                                        <li>
-                                            <a href="#" class="title">Multipage</a>
-                                            <ul>
-                                                <li><a href="index.html">Industry</a></li>
-                                                <li><a href="red-engineering.html">Red Engineering</a></li>
-                                                <li><a href="blue-construction.html">Blue Construction</a></li>
-                                                <li><a href="metallurgy.html">Metallurgy</a></li>
-                                                <li><a href="orange-construction.html">Orange construction</a></li>
-                                                <li><a href="laboratory.html">Laboratory</a></li>
-                                                <li><a href="renewable-energy.html">Renewable Energy</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="title">Multipage</a>
-                                            <ul>
-                                                <li><a href="oil-gas.html">Oil & Gas</a></li>
-                                                <li><a href="factory.html">Factory</a></li>
-                                                <li><a href="robotic.html">Robotic</a></li>
-                                                <li><a href="architecture.html">Architecture</a></li>
-                                                <li><a href="manufacturing.html">Manufacturing</a></li>
-                                                <li><a href="automation.html">Automation</a></li>
-                                                <li><a href="yellow-construction.html">Yellow Construction</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="title">Onepage</a>
-                                            <ul>
-                                                <li><a href="industrie-one-page.html">Industrie</a></li>
-                                                <li><a href="red-engineering-one-page.html">Engineering</a></li>
-                                                <li><a href="blue-construction-one-page.html">Blue Construct</a>
-                                                </li>
-                                                <li><a href="metallurgy-one-page.html">Metallurgy</a></li>
-                                                <li><a href="orange-construction-one-page.html">Orange Construction</a>
-                                                </li>
-                                                <li><a href="laboratory-one-page.html">Laboratory</a></li>
-                                                <li><a href="renewable-energy-one-page.html">Renewable Energy</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="title">Onepage</a>
-                                            <ul>
-                                                <li><a href="oil-gas-one-page.html">Oil Gas</a></li>
-                                                <li><a href="factory-one-page.html">Factory</a></li>
-                                                <li><a href="robotic-one-page.html">Robotic</a></li>
-                                                <li><a href="architecture-one-page.html">Architecture</a></li>
-                                                <li><a href="manufacturing-one-page.html">Manufacturing</a></li>
-                                                <li><a href="automation-one-page.html">Automation</a></li>
-                                                <li><a href="yellow-construction-one-page.html">Yellow Construction</a>
-                                            </ul>
-                                        </li>
-                                    </ul> -->
                                 </li>
                                 <!-- about menu -->
                                 <li class="Onepage-menu">
                                     <a href="about.html">About Us</a>
                                 </li>
-                                <!-- page menu -->
-                                 <!-- <li class="has-mega-menu menu-item-has-children">
-                                    <a href="javascript:void(0)">Products</a>
-                                    <ul class="mega-menu mega-grid-two">
-                                        <li>
-                                            <a href="#" class="title">Multipage</a>
-                                            <ul>
-                                                <li><a href="index.html">Industry</a></li>
-                                                <li><a href="red-engineering.html">Red Engineering</a></li>
-                                                <li><a href="blue-construction.html">Blue Construction</a></li>
-                                                <li><a href="metallurgy.html">Metallurgy</a></li>
-                                                <li><a href="orange-construction.html">Orange construction</a></li>
-                                                <li><a href="laboratory.html">Laboratory</a></li>
-                                                <li><a href="renewable-energy.html">Renewable Energy</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="title">Multipage</a>
-                                            <ul>
-                                                <li><a href="oil-gas.html">Oil & Gas</a></li>
-                                                <li><a href="factory.html">Factory</a></li>
-                                                <li><a href="robotic.html">Robotic</a></li>
-                                                <li><a href="architecture.html">Architecture</a></li>
-                                                <li><a href="manufacturing.html">Manufacturing</a></li>
-                                                <li><a href="automation.html">Automation</a></li>
-                                                <li><a href="yellow-construction.html">Yellow Construction</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="title">Onepage</a>
-                                            <ul>
-                                                <li><a href="industrie-one-page.html">Industrie</a></li>
-                                                <li><a href="red-engineering-one-page.html">Engineering</a></li>
-                                                <li><a href="blue-construction-one-page.html">Blue Construct</a>
-                                                </li>
-                                                <li><a href="metallurgy-one-page.html">Metallurgy</a></li>
-                                                <li><a href="orange-construction-one-page.html">Orange Construction</a>
-                                                </li>
-                                                <li><a href="laboratory-one-page.html">Laboratory</a></li>
-                                                <li><a href="renewable-energy-one-page.html">Renewable Energy</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="title">Onepage</a>
-                                            <ul>
-                                                <li><a href="oil-gas-one-page.html">Oil Gas</a></li>
-                                                <li><a href="factory-one-page.html">Factory</a></li>
-                                                <li><a href="robotic-one-page.html">Robotic</a></li>
-                                                <li><a href="architecture-one-page.html">Architecture</a></li>
-                                                <li><a href="manufacturing-one-page.html">Manufacturing</a></li>
-                                                <li><a href="automation-one-page.html">Automation</a></li>
-                                                <li><a href="yellow-construction-one-page.html">Yellow Construction</a>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li> -->
-                                
+
                                 <!--  product -->
-                              <li class="proarc-products-menu has-arrow">
-    <a href="products.php" class="proarc-trigger">Products</a>
-    <div class="proarc-megamenu-full">
-        <div class="proarc-menu-grid">
-            <!-- Column 1: CNC Profile Cutting Machines -->
-            <div class="proarc-column">
-                <h4 class="proarc-title">CNC Profile Cutting Machines</h4>
-                <ul>
-                    <li><a href="Havis.php">HAVIS - CNC Plasma Cutting Machine</a></li>
-                    <li><a href="Shreyas.php">SHREYAS - CNC Pipe Cutting Machine</a></li>
-                    <li><a href="Tejus.php">TEJUS - CNC Flame/Plasma Cutting Machine</a></li>
-                    <li><a href="Tejus-Ecno.php">TEJUS ECNO - CNC Flame/Plasma Cutting Machine</a></li>
-                </ul>
-            </div>
-            
-            <!-- Column 2: CNC Machine Tools -->
-            <div class="proarc-column">
-                <h4 class="proarc-title">CNC Machine Tools</h4>
-                <ul>
-                    <li><a href="rotohead.php">ROTOTHREAD – CNC Thread Milling Machine</a></li>
-                    <li><a href="rotodrill.php">ROTODRILL – CNC Plate Drilling Machine</a></li>
-                    <li><a href="rotogroove.php">ROTOGROOVE - CNC Internal Grooving Machine</a></li>
-                    <li><a href="rotowhirl.php">ROTOWHIRL - CNC Whirling Machine</a></li>
-                    <li><a href="rotoworm.php">ROTOWORM - CNC Worm Milling Machine</a></li>
-                    <li><a href="Deephole.php">ROTODEEP-HOLE - CNC Deep Hole Drilling Machine</a></li>
-                </ul>
-            </div>
-            
-            <!-- Column 3: Robot Automation + View All -->
-            <div class="proarc-column">
-                <h4 class="proarc-title">ROBOT AUTOMATION</h4>
-                <ul>
-                    <li><a href="robot-grinding.php">Grinding</a></li>
-                    <li><a href="robot-polishing.php">Polishing</a></li>
-                    <li><a href="robot-handling.php">Material Handling</a></li>
-                    <li><a href="robot-painting.php">Spray Painting</a></li>
-                </ul>
-                <div class="proarc-view-all-text">
-                    <a href="products.php">View All Products</a>
-                </div>
-            </div>
-        </div>
-        <!-- RIGHT CORNER IMAGE -->
-        <div class="proarc-corner-image">
-            <img src="images/b_images/products/corner-image.jpg" alt="CNC Machines">
-        </div>
-    </div>
-</li>
+                                <li class="proarc-products-menu">
+                                    <a href="products.php" class="proarc-trigger">Products</a>
+                                    <div class="proarc-megamenu-full">
+                                        <div class="proarc-menu-grid">
+                                            <!-- Column 1: CNC Profile Cutting Machines -->
+                                            <div class="proarc-column">
+                                                <h4 class="proarc-title">CNC Profile Cutting Machines</h4>
+                                                <ul>
+                                                    <li><a href="Havis.php">HAVIS - CNC Plasma Cutting Machine</a></li>
+                                                    <li><a href="Shreyas.php">SHREYAS - CNC Pipe Cutting Machine</a>
+                                                    </li>
+                                                    <li><a href="Tejus.php">TEJUS - CNC Flame/Plasma Cutting Machine</a>
+                                                    </li>
+                                                    <li><a href="Tejus-Ecno.php">TEJUS ECNO - CNC Flame/Plasma Cutting
+                                                            Machine</a></li>
+                                                </ul>
+                                            </div>
 
+                                            <!-- Column 2: CNC Machine Tools -->
+                                            <div class="proarc-column">
+                                                <h4 class="proarc-title">CNC Machine Tools</h4>
+                                                <ul>
+                                                    <li><a href="rotohead.php">ROTOTHREAD – CNC Thread Milling
+                                                            Machine</a></li>
+                                                    <li><a href="rotodrill.php">ROTODRILL – CNC Plate Drilling
+                                                            Machine</a></li>
+                                                    <li><a href="rotogroove.php">ROTOGROOVE - CNC Internal Grooving
+                                                            Machine</a></li>
+                                                    <li><a href="rotowhirl.php">ROTOWHIRL - CNC Whirling Machine</a>
+                                                    </li>
+                                                    <li><a href="rotoworm.php">ROTOWORM - CNC Worm Milling Machine</a>
+                                                    </li>
+                                                    <li><a href="Deephole.php">ROTODEEP-HOLE - CNC Deep Hole Drilling
+                                                            Machine</a></li>
+                                                </ul>
+                                            </div>
 
-
-<style>
-/* PROARC EXACT FULL-WIDTH MEGA MENU */
-.proarc-products-menu {
-    position: relative;
-}
-
-.proarc-megamenu-full {
-    position: fixed !important;
-    top: 110px !important; /* Adjust for your header height */
-    left: 0 !important;
-    right: 0 !important;
-    background: #1a1a1a !important;
-    border-top: 3px solid #ff6b00 !important; /* ProArc orange */
-    box-shadow: 0 15px 40px rgba(0,0,0,0.7) !important;
-    padding: 35px 8% !important;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-15px);
-    transition: all 0.3s ease !important;
-    z-index: 99999 !important;
-}
-
-.proarc-products-menu:hover .proarc-megamenu-full {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateY(0) !important;
-}
-
-.proarc-menu-grid {
-    display: flex !important;
-    gap: 50px !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-}
-
-.proarc-column {
-    flex: 1 !important;
-    padding-right: 20px !important;
-}
-
-.proarc-title {
-    font-family: 'Anton', sans-serif !important;
-    font-size: 15px !important;
-    color: #ffffff !important;
-    margin: 0 0 20px 0 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
-    padding-bottom: 10px !important;
-    border-bottom: 2px solid #ff6b00 !important; /* ProArc orange underline */
-    font-weight: 700 !important;
-}
-
-.proarc-column ul {
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.proarc-column ul li {
-    margin-bottom: 8px !important;
-}
-
-.proarc-column ul li a {
-    color: #cccccc !important;
-    font-family: 'Work Sans', sans-serif !important;
-    font-size: 14px !important;
-    text-decoration: none !important;
-    display: block !important;
-    padding: 10px 12px !important;
-    border-radius: 4px !important;
-    transition: all 0.25s ease !important;
-    line-height: 1.3 !important;
-}
-
-.proarc-column ul li a:hover {
-    color: #ff6b00 !important; /* ProArc orange */
-    background: rgba(255, 107, 0, 0.1) !important;
-    padding-left: 18px !important;
-    transform: translateX(5px) !important;
-}
-
-.proarc-view-all-btn {
-    margin-top: 25px !important;
-    padding-top: 20px !important;
-    border-top: 1px solid #333 !important;
-}
-
-.proarc-view-all-btn a {
-    display: inline-block !important;
-    color: #ff6b00 !important;
-    font-weight: 600 !important;
-    font-size: 14px !important;
-    padding: 10px 22px !important;
-    border: 2px solid #ff6b00 !important;
-    border-radius: 25px !important;
-    text-decoration: none !important;
-    transition: all 0.3s ease !important;
-}
-
-.proarc-view-all-btn a:hover {
-    background: #ff6b00 !important;
-    color: #1a1a1a !important;
-}
-
-/* ARROW STYLING */
-.proarc-products-menu.has-arrow > a:after {
-    content: '' !important;
-    position: absolute !important;
-    right: 20px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 0 !important;
-    height: 0 !important;
-    border-left: 4px solid transparent !important;
-    border-right: 4px solid transparent !important;
-    border-top: 5px solid #666 !important;
-}
-
-.proarc-products-menu:hover .has-arrow > a:after {
-    border-top-color: #ff6b00 !important;
-}
-
-/* MOBILE HIDE */
-@media (max-width: 1199px) {
-    .proarc-megamenu-full { display: none !important; }
-}
-</style>
-
-
-<script>
-$(document).ready(function() {
-    // ProArc hover enhancement
-    $('.proarc-products-menu').hover(
-        function() { $(this).addClass('proarc-hover'); },
-        function() { $(this).removeClass('proarc-hover'); }
-    );
-});
-</script>
+                                            <!-- Column 3: Robot Automation + View All -->
+                                            <div class="proarc-column">
+                                                <h4 class="proarc-title">ROBOT AUTOMATION</h4>
+                                                <ul>
+                                                    <li><a href="robot-grinding.php">Grinding</a></li>
+                                                    <li><a href="robot-polishing.php">Polishing</a></li>
+                                                    <li><a href="robot-handling.php">Material Handling</a></li>
+                                                    <li><a href="robot-painting.php">Spray Painting</a></li>
+                                                </ul>
+                                                <div class="proarc-view-all-text">
+                                                    <a href="products.php">View All Products</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- RIGHT CORNER IMAGE -->
+                                        <div class="proarc-corner-image">
+                                            <img src="images/b_images/products/corner-image.jpg" alt="CNC Machines">
+                                        </div>
+                                    </div>
+                                </li>
 
                                 <!-- elements menu -->
                                 <li class="Onepage-menu">
@@ -546,13 +277,13 @@ $(document).ready(function() {
                     <div class="rs-header-right">
                         <!-- call start -->
                         <div class="rs-header-call">
-                            <h6><a href="tel:971555961659">Tel. +97 155 596 1659</a></h6>
+                            <h6><a href="tel:+91 9449861404">Tel. +91 94498 61404</a></h6>
                         </div>
                         <!-- call end -->
 
                         <!-- search start -->
                         <div class="rs-header-search-wrapper">
-                            <div class="rs-header-search-icon has-theme-red">
+                            <div class="rs-header-search-icon has-theme-orange">
                                 <i class="ri-close-fill has-close"></i>
                                 <i class="ri-search-line has-search"></i>
                             </div>
@@ -567,7 +298,7 @@ $(document).ready(function() {
                         <!-- search end -->
 
                         <!-- sidebar start -->
-                        <div class="rs-header-hamburger has-theme-red">
+                        <div class="rs-header-hamburger has-theme-orange">
                             <div class="sidebar-toggle">
                                 <a class="bar-icon" href="javascript:void(0)">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
@@ -589,12 +320,12 @@ $(document).ready(function() {
 
     <!-- Offcanvas area start -->
     <div class="fix">
-        <div class="offcanvas-area has-theme-red" data-lenis-prevent>
+        <div class="offcanvas-area has-theme-orange" data-lenis-prevent>
             <div class="offcanvas-wrapper">
                 <div class="offcanvas-content">
                     <div class="offcanvas-top d-flex justify-content-between align-items-center mb-25">
                         <div class="offcanvas-logo">
-                            <a href="index.html"><img src="assets/images/logo/logo-red-black.png" alt="logo"></a>
+                            <a href="index.html"><img src="assets/bapl/logo.png" alt="logo"></a>
                         </div>
                         <div class="offcanvas-close">
                             <button class="offcanvas-close-icon animation--flip">
@@ -666,8 +397,8 @@ $(document).ready(function() {
                                     </svg>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a href="#"> 2096 New Market, New Road <br>
-                                        North Carolina, USA </a>
+                                    <a href="#"> BALAJI AUTOTECH PRIVATE LIMITED Plot No-23,Road No-5,3rd Phase
+                                        Koorgalli Industrial Area MYSORE 570018 KARNATAKA, INDIA</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center gap-15">
@@ -683,7 +414,7 @@ $(document).ready(function() {
                                     </svg>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a href="tel:+12346691234"> +123-4669-1234 </a>
+                                    <a href="tel:+91 9449861404"> +91 94498 61404 </a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center gap-15">
@@ -699,7 +430,7 @@ $(document).ready(function() {
                                     </svg>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a href="mailto:info@gmail.com">info@gmail.com</a>
+                                    <a href="mailto:sales@balajiautotech.com">sales@balajiautotech.com</a>
                                 </div>
                             </li>
                         </ul>
@@ -708,7 +439,6 @@ $(document).ready(function() {
                         <h4 class="offcanvas-title-meta">Subscribe & Follow</h4>
                         <ul>
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                             <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                         </ul>
@@ -727,19 +457,32 @@ $(document).ready(function() {
         <!-- banner area start -->
         <section class="rs-banner-area rs-banner-four p-relative rs-swiper">
             <div class="rs-banner-stroke-text">
-                <span>Metal</span>
+                <span>BAPL</span>
             </div>
+
             <div class="rs-banner-slider-wrapper">
                 <div class="swiper" data-clone-slides="false" data-loop="true" data-speed="2000" data-autoplay="true"
                     data-dots-dynamic="false" data-hover-pause="true" data-effect="fade" data-delay="1000" data-item="1"
                     data-item-xl="1" data-item-lg="1" data-item-md="1" data-item-sm="1" data-item-xs="1"
                     data-item-mobile="1" data-margin="30" data-margin-xl="30" data-margin-lg="30" data-margin-md="30"
                     data-margin-sm="30" data-margin-xs="30" data-margin-mobile="30">
+
                     <div class="swiper-wrapper">
+
+                        <!-- SLIDE 1 WITH VIDEO BG -->
                         <div class="swiper-slide">
                             <div class="rs-banner-item-wrapper">
-                                <div class="rs-banner-bg-thumb" data-background="assets/images/bg/banner-bg-05.png">
+
+                                <!-- Video background instead of rs-banner-bg-thumb -->
+                                <div class="rs-banner-bg-video">
+                                    <video class="rs-banner-video" autoplay muted loop playsinline>
+                                        <source src="assets/products_Bapl/1.mp4" type="video/mp4">
+                                        <!-- optional fallback image -->
+                                        <img src="assets/products_Bapl/1.mp4" alt="Banner background">
+                                    </video>
                                 </div>
+                                <div class="rs-banner-overlay"></div>
+
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-xxl-8 col-xl-10 col-lg-11">
@@ -748,17 +491,15 @@ $(document).ready(function() {
                                                     <span class="rs-banner-subtitle">
                                                         Shaping the Future of Metals
                                                     </span>
-                                                    <h1 class="rs-banner-title">Metallurgy solutions industry
-                                                    </h1>
+                                                    <h1 class="rs-banner-title"> Innovative mechatronics solutions</h1>
                                                     <div class="rs-banner-descrip">
-                                                        <p>We solve worldwide industrial every problem, the heart of
-                                                            global landscape
-                                                            the industry stands multidimensional was progress</p>
+                                                        <p>Delivering the excellence
+                                                            of Mechatronics Solutions.</p>
                                                     </div>
                                                     <div class="rs-banner-btn">
-                                                        <a class="rs-btn has-theme-red has-icon has-bg has-skew"
-                                                            href="contact.html">Explore
-                                                            More
+                                                        <a class="rs-btn has-theme-orange has-icon has-bg has-skew"
+                                                            href="contact.html">
+                                                            Explore More
                                                             <span class="icon-box">
                                                                 <svg class="icon-first"
                                                                     xmlns="http://www.w3.org/2000/svg"
@@ -777,17 +518,26 @@ $(document).ready(function() {
                                                             </span>
                                                         </a>
                                                     </div>
-                                                </div>
-                                            </div>
+                                                </div><!-- .rs-banner-content -->
+                                            </div><!-- .rs-banner-item -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- SLIDE 2 (copy and change video src) -->
                         <div class="swiper-slide">
                             <div class="rs-banner-item-wrapper">
-                                <div class="rs-banner-bg-thumb" data-background="assets/images/bg/banner-bg-06.png">
+
+                                <div class="rs-banner-bg-video">
+                                    <video class="rs-banner-video" autoplay muted loop playsinline>
+                                        <source src="assets/products_Bapl/2.mp4" type="video/mp4">
+                                        <img src="assets/products_Bapl/2.mp4" alt="Banner background">
+                                    </video>
                                 </div>
+                                <div class="rs-banner-overlay"></div>
+
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-xxl-8 col-xl-10 col-lg-11">
@@ -796,31 +546,17 @@ $(document).ready(function() {
                                                     <span class="rs-banner-subtitle">
                                                         Shaping the Future of Metals
                                                     </span>
-                                                    <h1 class="rs-banner-title">Innovations in Metallurgy Solutions</h1>
+                                                    <h1 class="rs-banner-title"> Turnkey CNC Projects</h1>
                                                     <div class="rs-banner-descrip">
-                                                        <p>We solve worldwide industrial every problem, the heart of
-                                                            global landscape
-                                                            the industry stands multidimensional was progress</p>
+                                                        <p>Complete CNC Profile Cutting services, from new machines to
+                                                            retrofits.</p>
                                                     </div>
                                                     <div class="rs-banner-btn">
-                                                        <a class="rs-btn has-theme-red has-icon has-bg has-skew"
-                                                            href="contact.html">Explore
-                                                            More
+                                                        <a class="rs-btn has-theme-orange has-icon has-bg has-skew"
+                                                            href="contact.html">
+                                                            Explore More
                                                             <span class="icon-box">
-                                                                <svg class="icon-first"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    viewBox="0 0 32 32">
-                                                                    <path
-                                                                        d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                                    </path>
-                                                                </svg>
-                                                                <svg class="icon-second"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    viewBox="0 0 32 32">
-                                                                    <path
-                                                                        d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                                    </path>
-                                                                </svg>
+                                                                <!-- same SVG icons -->
                                                             </span>
                                                         </a>
                                                     </div>
@@ -829,23 +565,27 @@ $(document).ready(function() {
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
+
                     </div>
-                    <!-- If we need navigation buttons -->
+
+                    <!-- navigation and pagination stay unchanged -->
                     <div class="rs-banner-navigation">
-                        <button class="swiper-button-prev rs-swiper-btn has-theme-red"><i
+                        <button class="swiper-button-prev rs-swiper-btn has-theme-orange"><i
                                 class="fa-regular fa-arrow-left"></i></button>
-                        <button class="swiper-button-next rs-swiper-btn has-theme-red"><i
+                        <button class="swiper-button-next rs-swiper-btn has-theme-orange"><i
                                 class="fa-regular fa-arrow-right"></i></button>
                     </div>
-                    <!-- if we need pagination -->
+
                     <div class="rs-banner-pagination d-block d-md-none">
-                        <div class="swiper-pagination rs-pagination has-theme-red"></div>
+                        <div class="swiper-pagination rs-pagination has-theme-orange"></div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- banner area end -->
 
         <!-- feature area start -->
@@ -856,12 +596,12 @@ $(document).ready(function() {
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="rs-feature-item wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                             <div class="rs-feature-icon">
-                                <img src="assets/images/icon/feature-icon-04.png" alt="image">
+                                <img src="assets/images/icon/feature-icon-06.png" alt="image">
                             </div>
                             <div class="rs-feature-content">
-                                <h5 class="rs-feature-title">Best manufacturing service provider</h5>
+                                <h5 class="rs-feature-title">CNC Cutting Solutions</h5>
                                 <div class="rs-feature-descrip">
-                                    <p>Industry stands multinational was progress driving.</p>
+                                    <p>Delivering excellence in mechatronics for global industries</p>
                                 </div>
                             </div>
                         </div>
@@ -869,12 +609,12 @@ $(document).ready(function() {
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="rs-feature-item wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
                             <div class="rs-feature-icon">
-                                <img src="assets/images/icon/feature-icon-05.png" alt="image">
+                                <img src="assets/images/icon/feature-icon-06.png" alt="image">
                             </div>
                             <div class="rs-feature-content">
-                                <h5 class="rs-feature-title">We are always building quality industry</h5>
+                                <h5 class="rs-feature-title">CNC Plasma & Oxy-Fuel Experts</h5>
                                 <div class="rs-feature-descrip">
-                                    <p>Industry stands multinational was progress driving.</p>
+                                    <p>Founded 2002 - Leading exporter of precision CNC machines</p>
                                 </div>
                             </div>
                         </div>
@@ -885,9 +625,9 @@ $(document).ready(function() {
                                 <img src="assets/images/icon/feature-icon-06.png" alt="image">
                             </div>
                             <div class="rs-feature-content">
-                                <h5 class="rs-feature-title">Techniques such as crushing, grinding</h5>
+                                <h5 class="rs-feature-title">Profile Cutting & Machine Tools</h5>
                                 <div class="rs-feature-descrip">
-                                    <p>Industry stands multinational was progress driving.</p>
+                                    <p>From retrofits to robotics - Complete automation solutions</p>
                                 </div>
                             </div>
                         </div>
@@ -905,12 +645,12 @@ $(document).ready(function() {
                         <div class="rs-about-thumb-wrapper">
                             <div class="rs-about-thumb-left-part">
                                 <div class="rs-about-thumb">
-                                    <img src="assets/images/about/about-thumb-04.png" alt="image">
+                                    <img src="assets/products_Bapl/polishing.png" alt="image">
                                 </div>
                                 <div class="rs-about-video-btn">
                                     <div class="rs-rotate-btn">
-                                        <a href="https://www.youtube.com/watch?v=Yue48fUXuqI"
-                                            class="rs-play-btn popup-video has-theme-red"><i
+                                        <a href="https://www.youtube.com/watch?v=q79NjZaDlzU&t=107s"
+                                            class="rs-play-btn popup-video has-theme-orange"><i
                                                 class="ri-play-fill"></i></a>
                                         <div class="rs-circle-title gsap-rotate rs-text-circle-wrapper">
                                             <div class="rs-text-circle" data-rotate-degree="13.33">
@@ -924,7 +664,7 @@ $(document).ready(function() {
                                 <div class="rs-about-counter">
                                     <div class="rs-counter-inner">
                                         <div class="rs-counter-number-wrapper">
-                                            <span class="rs-counter-number odometer" data-count="52">00</span>
+                                            <span class="rs-counter-number odometer" data-count="20">00</span>
                                             <span class="prefix">+</span>
                                         </div>
                                         <span class="rs-counter-title">Years of Experience
@@ -945,12 +685,14 @@ $(document).ready(function() {
                                     <span class="rs-section-subtitle  has-bg-field justify-content-start">
                                         About Us
                                     </span>
-                                    <h2 class="rs-section-title rs-split-text-enable split-in-fade">We largest
-                                        independent
-                                        metallurgy solutions</h2>
-                                    <p class="descrip">We solve worldwide industrial every problem, the heart of global
-                                        landscape
-                                        the industry stands multidimensional electronic typesetting.</p>
+                                    <h2 class="rs-section-title rs-split-text-enable split-in-fade">We leading CNC
+                                        precision engineering
+                                        solutions since 2002</h2>
+                                    <p class="descrip">Balaji Auto Tech Pvt Ltd manufactures CNC machines, founded in
+                                        2002 by Mr. G.P. Satish.
+                                        Leading exporter of CNC Plasma, Oxy-Fuel Cutting Machines & machine tool
+                                        retrofits.
+                                        Excellence in precision engineering for global industries.</p>
                                 </div>
                                 <div class="rs-about-tab">
                                     <ul class="nav nav-pills" id="pills-tab" role="tablist">
@@ -981,22 +723,20 @@ $(document).ready(function() {
                                         <div class="tab-pane fade show active" id="pills-item-one" role="tabpanel"
                                             aria-labelledby="pills-item-one-tab" tabindex="0">
                                             <div class="rs-about-tab-content">
-                                                <p>Welcome to Industrie, a leading industry innovator with a rich
-                                                    history of
-                                                    excellence
-                                                    with a passion make also for precision we have been empowering
-                                                    industries and
-                                                    driving progress for</p>
+                                                <p>From specialized retrofitting to cutting-edge CNC innovation, Balaji
+                                                    Auto Tech has evolved
+                                                    to deliver precision engineering solutions worldwide since 2002.
+                                                </p>
                                                 <div class="rs-about-feature-list">
-                                                    <div class="rs-list-item has-theme-red">
+                                                    <div class="rs-list-item has-theme-orange">
                                                         <ul>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                Quality Control System
+                                                                CE Mark, ISO Certified Manufacturing
                                                             </li>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                Building Quality Industrial
+                                                                GST & MSME Registered Exporter
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -1006,22 +746,18 @@ $(document).ready(function() {
                                         <div class="tab-pane fade" id="pills-item-two" role="tabpanel"
                                             aria-labelledby="pills-item-two-tab" tabindex="0">
                                             <div class="rs-about-tab-content">
-                                                <p>Welcome to Industrie, a leading industry innovator with a rich
-                                                    history of
-                                                    excellence
-                                                    with a passion make also for precision we have been empowering
-                                                    industries and
-                                                    driving progress for</p>
+                                                <p>To provide innovative CNC machines that enhance precision and
+                                                    efficiency for global industries.</p>
                                                 <div class="rs-about-feature-list">
-                                                    <div class="rs-list-item has-theme-red">
+                                                    <div class="rs-list-item has-theme-orange">
                                                         <ul>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                Quality Control System
+                                                                CE Mark, ISO Certified Manufacturing
                                                             </li>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                Building Quality Industrial
+                                                                GST & MSME Registered Exporter
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -1031,22 +767,18 @@ $(document).ready(function() {
                                         <div class="tab-pane fade" id="pills-item-three" role="tabpanel"
                                             aria-labelledby="pills-item-three-tab" tabindex="0">
                                             <div class="rs-about-tab-content">
-                                                <p>Welcome to Industrie, a leading industry innovator with a rich
-                                                    history of
-                                                    excellence
-                                                    with a passion make also for precision we have been empowering
-                                                    industries and
-                                                    driving progress for</p>
+                                                <p>To lead globally in CNC machine innovation and precision engineering
+                                                    excellence.</p>
                                                 <div class="rs-about-feature-list">
-                                                    <div class="rs-list-item has-theme-red">
+                                                    <div class="rs-list-item has-theme-orange">
                                                         <ul>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                Quality Control System
+                                                                CE Mark, ISO Certified Manufacturing
                                                             </li>
                                                             <li>
                                                                 <i class="fa-regular fa-check"></i>
-                                                                Building Quality Industrial
+                                                                GST & MSME Registered Exporter
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -1057,7 +789,7 @@ $(document).ready(function() {
                                 </div>
                                 <div class="rs-about-author-info">
                                     <div class="rs-about-btn">
-                                        <a class="rs-btn has-theme-red has-icon has-bg has-skew"
+                                        <a class="rs-btn has-theme-orange has-icon has-bg has-skew"
                                             href="about.html">Explore More
                                             <span class="icon-box">
                                                 <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
@@ -1075,14 +807,14 @@ $(document).ready(function() {
                                             </span>
                                         </a>
                                     </div>
-                                    <div class="rs-about-author">
+                                    <!-- <div class="rs-about-author">
                                         <div class="rs-about-author-thumb">
                                             <img src="assets/images/user/user-thumb-04.png" alt="image">
                                         </div>
                                         <div class="rs-about-author-sign-thumb">
                                             <img src="assets/images/shape/sign-shape.png" alt="image">
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -1094,7 +826,7 @@ $(document).ready(function() {
 
         <!-- services area start -->
         <section class="rs-servcies-area rs-services-four">
-            <div class="rs-services-bg-thumb" data-background="assets/images/bg/services-bg-02.png"></div>
+            <div class="rs-services-bg-thumb" data-background="assets/bapl/service.png"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-xxl-8 col-xl-7 col-lg-8 col-md-9">
@@ -1103,10 +835,8 @@ $(document).ready(function() {
                                 <span class="rs-section-subtitle  has-bg-field justify-content-start">
                                     Our Awesome Services
                                 </span>
-                                <h2 class="rs-section-title rs-split-text-enable split-in-fade mb-25">We provide
-                                    essential
-                                    services
-                                    for any industry</h2>
+                                <h2 class="rs-section-title rs-split-text-enable split-in-fade mb-25">We deliver
+                                    essential CNC services for precision manufacturing</h2>
                                 <p class="descrip">We solve worldwide industrial every problem, the heart of global
                                     landscape
                                     the industry stands multidimensional electronic typesetting.</p>
@@ -1114,17 +844,14 @@ $(document).ready(function() {
                             <div class="rs-services-content-wrapper">
                                 <div class="rs-services-item wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                                     <div class="rs-services-thumb prallax-parent">
-                                        <img data-depth="2" src="assets/images/services/services-thumb-14.png"
-                                            alt="image">
+                                        <img data-depth="2" src="assets/products_Bapl/havis.png" alt="image">
                                     </div>
                                     <div class="rs-services-content">
                                         <span class="rs-services-count-number">
                                             01
                                         </span>
-                                        <h5 class="rs-services-title underline has-theme-red"><a
-                                                href="services-details.html">Heat
-                                                Treatment and
-                                                Metal Processing</a>
+                                        <h5 class="rs-services-title underline has-theme-orange"><a
+                                                href="services-details.html">Refurbishment and Reconditioning</a>
                                         </h5>
                                     </div>
                                     <div class="rs-services-icon-btn">
@@ -1148,15 +875,14 @@ $(document).ready(function() {
                                 </div>
                                 <div class="rs-services-item wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
                                     <div class="rs-services-thumb prallax-parent">
-                                        <img data-depth="2" src="assets/images/services/services-thumb-15.png"
-                                            alt="image">
+                                        <img data-depth="2" src="assets/products_Bapl/MH.png" alt="image">
                                     </div>
                                     <div class="rs-services-content">
                                         <span class="rs-services-count-number">
                                             02
                                         </span>
-                                        <h5 class="rs-services-title underline has-theme-red"><a
-                                                href="services-details.html">Custom Alloy Manufacturing</a>
+                                        <h5 class="rs-services-title underline has-theme-orange"><a
+                                                href="services-details.html">Reconditioning of CNC Machineries</a>
                                         </h5>
                                     </div>
                                     <div class="rs-services-icon-btn">
@@ -1180,16 +906,15 @@ $(document).ready(function() {
                                 </div>
                                 <div class="rs-services-item wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
                                     <div class="rs-services-thumb prallax-parent">
-                                        <img data-depth="2" src="assets/images/services/services-thumb-16.png"
-                                            alt="image">
+                                        <img data-depth="2" src="assets/products_Bapl/Griding.png" alt="image">
                                     </div>
                                     <div class="rs-services-content">
                                         <span class="rs-services-count-number">
                                             03
                                         </span>
-                                        <h5 class="rs-services-title underline has-theme-red"><a
-                                                href="services-details.html">Best
-                                                Innovations in Metallurgy</a>
+                                        <h5 class="rs-services-title underline has-theme-orange"><a
+                                                href="services-details.html">Benefits of Refurbishment and
+                                                Reconditioning</a>
                                         </h5>
                                     </div>
                                     <div class="rs-services-icon-btn">
@@ -1212,7 +937,7 @@ $(document).ready(function() {
                                     </div>
                                 </div>
                                 <div class="rs-services-btn">
-                                    <a class="rs-btn has-theme-red has-icon has-bg has-skew"
+                                    <a class="rs-btn has-theme-orange has-icon has-bg has-skew"
                                         href="services.html">Explore More
                                         <span class="icon-box">
                                             <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
@@ -1758,49 +1483,266 @@ $(document).ready(function() {
         </section>
         <!-- category area end -->
 
-        <!-- progress area start -->
-        <section class="rs-progress-area rs-progress-one section-space-bottom">
+        <!-- faq area start -->
+        <section class="rs-faq-area section-space rs-faq-one">
+            <div class="rs-faq-bg-thumb" data-background="assets/images/bg/faq-bg-03.png"></div>
             <div class="container">
                 <div class="row g-5">
                     <div class="col-xl-6 col-lg-6">
-                        <div class="rs-progress-wrapper wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s">
-                            <div class="rs-progress-bg-thumb"
-                                data-background="assets/images/progress/progress-thumb-02.png">
+                        <!-- faq area start -->
+                        <div class="rs-faq-wrapper">
+                            <div class="rs-section-title-wrapper section-title-space">
+                                <span class="rs-section-subtitle has-theme-orange justify-content-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15"
+                                        fill="none">
+                                        <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
+                                            fill="#EA5501"></path>
+                                    </svg>
+                                    Faq's
+                                </span>
+                                <h2 class="rs-section-title rs-split-text-enable split-in-fade">General Questions</h2>
                             </div>
-                            <div class="rs-progress-content">
-                                <span class="rs-progress-subtitle">Start Your Project </span>
-                                <h3 class="rs-progress-title">Metallurgical products of the highest class</h3>
-                                <div class="rs-progress-btn">
-                                    <a class="rs-btn has-theme-red has-icon has-bg has-skew" href="contact.html">Explore
-                                        More
-                                        <span class="icon-box">
-                                            <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 32 32">
-                                                <path
-                                                    d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                </path>
-                                            </svg>
-                                            <svg class="icon-second" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 32 32">
-                                                <path
-                                                    d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                </path>
-                                            </svg>
-                                        </span>
-                                    </a>
+                            <div class="rs-faq-content rs-accordion-one has-theme-orange">
+                                <div class="accordion-wrapper">
+                                    <div class="accordion" id="accordionExampleOne">
+                                        <div class="rs-accordion-item has-border-active">
+                                            <h4 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    01.What industries do you serve?
+                                                    <span class="accordion-btn"></span>
+                                                </button>
+                                            </h4>
+                                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                                data-bs-parent="#accordionExampleOne">
+                                                <div class="accordion-body"> Industries such as aerospace, automotive,
+                                                    defence, electronics, shipbuilding, construction, fabrication and
+                                                    manufacturing frequently use CNC machining for precision parts
+                                                    production.
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rs-accordion-item has-border-active">
+                                            <h6 class="accordion-header" id="headingTwo">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                    02. Can you handle custom/SPM’S projects?
+
+                                                    <span class="accordion-btn"></span>
+                                                </button>
+                                            </h6>
+                                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExampleOne">
+                                                <div class="accordion-body">Yes, we specialize in custom machining
+                                                    solutions tailored to your specific project requirements.</div>
+                                            </div>
+                                        </div>
+                                        <div class="rs-accordion-item has-border-active">
+                                            <h6 class="accordion-header" id="headingThree">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree">
+                                                    03. Do you manufacture or service manual machines?
+
+                                                    <span class="accordion-btn"></span>
+                                                </button>
+                                            </h6>
+                                            <div id="collapseThree" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExampleOne">
+                                                <div class="accordion-body">No, we support and manufacture CNC machines
+                                                    only.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rs-accordion-item has-border-active">
+                                            <h6 class="accordion-header" id="headingFour">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                    aria-expanded="false" aria-controls="collapseFour">
+                                                    04. What is the delivery time for CNC machines?
+
+                                                    <span class="accordion-btn"></span>
+                                                </button>
+                                            </h6>
+                                            <div id="collapseFour" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExampleOne">
+                                                <div class="accordion-body">It varies based on project complexity and
+                                                    size, but we aim to provide timely delivery estimates anywhere
+                                                    between 16-20 weeks.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- faq area end -->
                     </div>
+                    <!-- testimonial area start -->
                     <div class="col-xl-6 col-lg-6">
-                        <div class="rs-progress-thumb wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
-                            <img src="assets/images/progress/progress-bar-thumb-01.png" alt="image">
+                        <div class="rs-global-presence-wrapper rs-testimonial-wrapper rs-testimonial-two">
+                            <div class="rs-section-title-wrapper section-title-space">
+                                <span class="rs-section-subtitle has-theme-orange justify-content-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15"
+                                        fill="none">
+                                        <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
+                                            fill="#EA5501"></path>
+                                    </svg>
+                                    Global Presence
+                                </span>
+                                <h2 class="rs-section-title rs-split-text-enable split-in-fade mb-0">We Are In</h2>
+                            </div>
+
+                            <div class="rs-global-map-full">
+                                <div id="world-map"
+                                    style="width: 100%; height: 400px; background: #1a1a1a; border-radius: 20px; position: relative; overflow: hidden;">
+                                    <div class="pin pin-india" style="top: 45%; left: 70%;"></div>
+                                    <div class="pin pin-uk" style="top: 25%; left: 47%;"></div>
+                                    <div class="pin pin-germany" style="top: 28%; left: 51%;"></div>
+                                    <div class="pin pin-israel" style="top: 38%; left: 56%;"></div>
+                                    <div class="pin pin-dubai" style="top: 42%; left: 59%;"></div>
+                                    <div class="pin pin-africa" style="top: 60%; left: 53%;"></div>
+                                </div>
+                            </div>
+                            <div class="rs-global-locations-grid">
+                                <div class="row g-2 mt-4">
+                                    <div class="col-6 col-md-4">
+                                        <div class="loc-item"
+                                            onclick="focusLocation('india', 'Industrial Hub, Mysuru, India')">India
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="loc-item"
+                                            onclick="focusLocation('uk', 'London Business District, UK')">UK</div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="loc-item"
+                                            onclick="focusLocation('germany', 'Berlin Engineering Center, Germany')">
+                                            Germany</div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="loc-item"
+                                            onclick="focusLocation('israel', 'Tel Aviv Tech Zone, Israel')">Israel</div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="loc-item"
+                                            onclick="focusLocation('dubai', 'Dubai Industrial City, UAE')">Dubai</div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="loc-item"
+                                            onclick="focusLocation('africa', 'Nairobi Support Hub, Kenya')">Africa</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="map-tooltip" class="custom-map-tooltip"></div>
+                        </div>
+                    </div>
+
+
+                    <!-- testimonial area end -->
+                </div>
+            </div>
+        </section>
+        <!-- faq area end -->
+
+        <!-- services style 05 -->
+        <section class="rs-elements-services-area section-space rs-services-nine primary-bg rs-swiper">
+            <div class="container">
+                <div class="row  g-5 justify-content-center section-title-space align-items-center">
+                    <div class="col-xxl-8 col-xl-9 col-lg-9">
+                        <div class="rs-section-title-wrapper text-center">
+                            <span class="rs-section-subtitle has-theme-orange">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15"
+                                    fill="none">
+                                    <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
+                                        fill="#EA5501"></path>
+                                </svg>
+                                Products
+                            </span>
+                            <h2 class="rs-section-title rs-split-text-enable split-in-fade">Our Products</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="rs-services-slider-wrapper">
+                            <div class="swiper" data-clone-slides="false" data-loop="false" data-speed="2000"
+                                data-autoplay="true" data-dots-dynamic="false" data-hover-pause="true"
+                                data-effect="false" data-delay="1000" data-item="3" data-item-xl="2" data-item-lg="2"
+                                data-item-md="2" data-item-sm="1" data-item-xs="1" data-item-mobile="1"
+                                data-margin="30">
+                                <div class="swiper-wrapper process-counts">
+                                    <div class="swiper-slide">
+                                        <div class="rs-services-item">
+                                            <div class="rs-services-thumb">
+                                                <img src="assets/bapl/harvisprod.png" alt="image">
+                                            </div>
+                                            <div class="rs-services-content">
+                                                <h5 class="rs-services-title"><a href="services-details.html"> CNC
+                                                        Plasma & Oxy-Fuel Cutting
+                                                    </a></h5>
+                                                <div class="rs-services-descrip">
+                                                    <p>Precision CNC plasma & oxy-fuel cutting machines for profile/pipe
+                                                        fabrication (HAVIS, SHREYAS, TEJUS).</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rs-services-item">
+                                            <div class="rs-services-thumb">
+                                                <img src="assets/images/services/services-thumb-25.png" alt="image">
+                                            </div>
+                                            <div class="rs-services-content">
+                                                <h5 class="rs-services-title"><a href="services-details.html"> Machine
+                                                        Tool Retrofits & Reconditioning </a>
+                                                </h5>
+                                                <div class="rs-services-descrip">
+                                                    <p>ROTO series retrofits upgrade existing machine tools with modern
+                                                        CNC controls for enhanced precision and performance.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rs-services-item">
+                                            <div class="rs-services-thumb">
+                                                <img src="assets/images/services/services-thumb-24.png" alt="image">
+                                            </div>
+                                            <div class="rs-services-content">
+                                                <h5 class="rs-services-title"><a href="services-details.html"> Robotic
+                                                        Grinding & Automation</a>
+                                                </h5>
+                                                <div class="rs-services-descrip">
+                                                    <p>Robotic grinding, polishing, material handling & spray painting
+                                                        automation for precision finishing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- if we need pagination -->
+                                <div class="rs-services-pagination">
+                                    <div class="swiper-pagination rs-pagination has-theme-orange"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- progress area end -->
+        <!-- services style 05 -->
 
         <!-- portfolio area start -->
         <section class="rs-portfolio-area rs-portfolio-three section-space-bottom">
@@ -1830,7 +1772,7 @@ $(document).ready(function() {
                                 </h3>
                             </div>
                             <div class="rs-portfolio-btn">
-                                <a class="rs-btn has-theme-red has-circle has-icon" href="portfolio-details.html">
+                                <a class="rs-btn has-theme-orange has-circle has-icon" href="portfolio-details.html">
                                     <span class="icon-box">
                                         <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                             <path
@@ -1860,7 +1802,7 @@ $(document).ready(function() {
                                 </h3>
                             </div>
                             <div class="rs-portfolio-btn">
-                                <a class="rs-btn has-theme-red has-circle has-icon" href="portfolio-details.html">
+                                <a class="rs-btn has-theme-orange has-circle has-icon" href="portfolio-details.html">
                                     <span class="icon-box">
                                         <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                             <path
@@ -1890,7 +1832,7 @@ $(document).ready(function() {
                                 </h3>
                             </div>
                             <div class="rs-portfolio-btn">
-                                <a class="rs-btn has-theme-red has-circle has-icon" href="portfolio-details.html">
+                                <a class="rs-btn has-theme-orange has-circle has-icon" href="portfolio-details.html">
                                     <span class="icon-box">
                                         <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                             <path
@@ -1920,7 +1862,7 @@ $(document).ready(function() {
                                 </h3>
                             </div>
                             <div class="rs-portfolio-btn">
-                                <a class="rs-btn has-theme-red has-circle has-icon" href="portfolio-details.html">
+                                <a class="rs-btn has-theme-orange has-circle has-icon" href="portfolio-details.html">
                                     <span class="icon-box">
                                         <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                             <path
@@ -1950,7 +1892,7 @@ $(document).ready(function() {
                                 </h3>
                             </div>
                             <div class="rs-portfolio-btn">
-                                <a class="rs-btn has-theme-red has-circle has-icon" href="portfolio-details.html">
+                                <a class="rs-btn has-theme-orange has-circle has-icon" href="portfolio-details.html">
                                     <span class="icon-box">
                                         <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                             <path
@@ -1972,267 +1914,6 @@ $(document).ready(function() {
         </section>
         <!-- portfolio area end -->
 
-        <!-- testimonial area start -->
-        <section class="rs-testimonial-area rs-testimonial-three rs-swiper has-bg-blue">
-            <div class="rs-testimonial-bg-thumb" data-background="assets/images/testimonial/testimonial-thumb-01.png">
-            </div>
-            <div class="rs-testimonial-bg-thumb-two" data-background="assets/images/bg/testimonials-bg-02.png"> </div>
-            <div class="container">
-                <div class="row justify-content-end">
-                    <div class="col-xxl-6 col-xl-7 col-lg-7">
-                        <div class="rs-testimonial-wrapper">
-                            <div class="rs-section-title-wrapper section-title-space">
-                                <span class="rs-section-subtitle  has-bg-field justify-content-start">
-                                    Testimonials
-                                </span>
-                                <h2 class="rs-section-title rs-split-text-enable split-in-fade">what Client Say</h2>
-                            </div>
-                            <div class="rs-testimonial-slider-wrapper">
-                                <div class="swiper" data-clone-slides="false" data-loop="true" data-speed="1500"
-                                    data-autoplay="true" data-dots-dynamic="false" data-hover-pause="true"
-                                    data-effect="false" data-delay="2500" data-item="1" data-item-xl="1"
-                                    data-item-lg="1" data-item-md="1" data-item-sm="1" data-item-xs="1"
-                                    data-item-mobile="1" data-margin="30" data-margin-xl="30">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="rs-testimonial-item">
-                                                <div class="rs-testimonial-avater-thumb">
-                                                    <div class="rs-testimonial-thumb">
-                                                        <img src="assets/images/user/user-thumb-01.png" alt="image">
-                                                    </div>
-                                                    <div class="rs-testimonial-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="29"
-                                                            viewBox="0 0 40 29" fill="none">
-                                                            <path
-                                                                d="M2.85714 29H11.4286L17.1429 17.4V0H0V17.4H8.57143L2.85714 29ZM25.7143 29H34.2857L40 17.4V0H22.8571V17.4H31.4286L25.7143 29Z"
-                                                                fill="white" fill-opacity="0.4"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="rs-testimonial-content">
-                                                    <h5 class="rs-testimonial-title">Best Company</h5>
-                                                    <div class="rs-testimonial-description">
-                                                        <p>Podcasting operational change management inside of workflows
-                                                            to establish a
-                                                            framework Taking seamless key performance indicators.</p>
-                                                    </div>
-                                                    <div class="rs-tesimonial-avater-info">
-                                                        <h6 class="rs-testimonial-avater-title">Nayeem</h6>
-                                                        <span class="rs-testimonial-avater-designation">Manager</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="rs-testimonial-item">
-                                                <div class="rs-testimonial-avater-thumb">
-                                                    <div class="rs-testimonial-thumb">
-                                                        <img src="assets/images/user/user-thumb-02.png" alt="image">
-                                                    </div>
-                                                    <div class="rs-testimonial-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="29"
-                                                            viewBox="0 0 40 29" fill="none">
-                                                            <path
-                                                                d="M2.85714 29H11.4286L17.1429 17.4V0H0V17.4H8.57143L2.85714 29ZM25.7143 29H34.2857L40 17.4V0H22.8571V17.4H31.4286L25.7143 29Z"
-                                                                fill="white" fill-opacity="0.4"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="rs-testimonial-content">
-                                                    <h5 class="rs-testimonial-title">Best Company</h5>
-                                                    <div class="rs-testimonial-description">
-                                                        <p>Podcasting operational change management inside of workflows
-                                                            to establish a
-                                                            framework Taking seamless key performance indicators.</p>
-                                                    </div>
-                                                    <div class="rs-tesimonial-avater-info">
-                                                        <h6 class="rs-testimonial-avater-title">Abdur Rashid</h6>
-                                                        <span class="rs-testimonial-avater-designation">Founder &amp;
-                                                            CEO</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="rs-testimonial-item">
-                                                <div class="rs-testimonial-avater-thumb">
-                                                    <div class="rs-testimonial-thumb">
-                                                        <img src="assets/images/user/user-thumb-03.png" alt="image">
-                                                    </div>
-                                                    <div class="rs-testimonial-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="29"
-                                                            viewBox="0 0 40 29" fill="none">
-                                                            <path
-                                                                d="M2.85714 29H11.4286L17.1429 17.4V0H0V17.4H8.57143L2.85714 29ZM25.7143 29H34.2857L40 17.4V0H22.8571V17.4H31.4286L25.7143 29Z"
-                                                                fill="white" fill-opacity="0.4"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="rs-testimonial-content">
-                                                    <h5 class="rs-testimonial-title">Best Company</h5>
-                                                    <div class="rs-testimonial-description">
-                                                        <p>Podcasting operational change management inside of workflows
-                                                            to establish a
-                                                            framework Taking seamless key performance indicators.</p>
-                                                    </div>
-                                                    <div class="rs-tesimonial-avater-info">
-                                                        <h6 class="rs-testimonial-avater-title">Tom Hanks</h6>
-                                                        <span class="rs-testimonial-avater-designation">Customer</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- If we need navigation buttons -->
-                                    <div class=" rs-testimonial-navigation">
-                                        <button class="swiper-button-prev rs-swiper-btn has-light-red"><i
-                                                class="fa-regular fa-arrow-left"></i></button>
-                                        <button class="swiper-button-next rs-swiper-btn has-light-red"><i
-                                                class="fa-regular fa-arrow-right"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <!-- testimonial area end -->
-
-        <!-- blog area start -->
-        <section class="rs-blog-area section-space rs-blog-two">
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-xl-8 col-lg-9">
-                        <div class="rs-section-title-wrapper text-center section-title-space">
-                            <span class="rs-section-subtitle  has-bg-field">
-                                News &amp; Blog
-                            </span>
-                            <h2 class="rs-section-title rs-split-text-enable split-in-fade">Discover the future of
-                                factories
-                                and Industries</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-5">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="rs-blog-item wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                            <div class="rs-blog-thumb">
-                                <a href="blog-details.html"> <img src="assets/images/blog/blog-thumb-04.png"
-                                        alt="image"></a>
-                            </div>
-                            <div class="rs-blog-content">
-                                <div class="rs-blog-tag has-theme-red">
-                                    <a href="blog-details.html">Company</a>
-                                </div>
-                                <h5 class="rs-blog-title underline has-black"> <a href="blog-details.html">Construction
-                                        of a new
-                                        high tech plant in Washington</a>
-                                </h5>
-                                <div class="rs-blog-meta">
-                                    <div class="rs-blog-meta-item">
-                                        <span>
-                                            By
-                                            <a class="rs-blog-meta-author" href="#"> Nayeem</a>
-                                        </span>
-                                    </div>
-                                    <div class="rs-blog-meta-item">
-                                        <span>
-                                            Feb 8, 2024
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="rs-blog-btn-wrapper">
-                                    <span class="rs-blog-meta-text">22 min read</span>
-                                    <a class="rs-square-btn has-icon has-light-grey" href="blog-details.html">
-                                        <span class="icon-box">
-                                            <i class="ri-arrow-right-line icon-first"></i>
-                                            <i class="ri-arrow-right-line icon-second"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="rs-blog-item wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
-                            <div class="rs-blog-thumb">
-                                <a href="blog-details.html"> <img src="assets/images/blog/blog-thumb-05.png"
-                                        alt="image"></a>
-                            </div>
-                            <div class="rs-blog-content">
-                                <div class="rs-blog-tag has-theme-red">
-                                    <a href="blog-details.html">industry</a>
-                                </div>
-                                <h5 class="rs-blog-title underline has-black"> <a href="blog-details.html">Building
-                                        resilient supply for industries and factorie</a></h5>
-                                <div class="rs-blog-meta">
-                                    <div class="rs-blog-meta-item">
-                                        <span>
-                                            By
-                                            <a class="rs-blog-meta-author" href="#"> Nayeem</a>
-                                        </span>
-                                    </div>
-                                    <div class="rs-blog-meta-item">
-                                        <span>
-                                            Feb 8, 2024
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="rs-blog-btn-wrapper">
-                                    <span class="rs-blog-meta-text">22 min read</span>
-                                    <a class="rs-square-btn has-icon has-light-grey" href="blog-details.html">
-                                        <span class="icon-box">
-                                            <i class="ri-arrow-right-line icon-first"></i>
-                                            <i class="ri-arrow-right-line icon-second"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="rs-blog-item wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
-                            <div class="rs-blog-thumb">
-                                <a href="blog-details.html"> <img src="assets/images/blog/blog-thumb-06.png"
-                                        alt="image"></a>
-                            </div>
-                            <div class="rs-blog-content">
-                                <div class="rs-blog-tag has-theme-red">
-                                    <a href="blog-details.html">Gas &amp; Oil</a>
-                                </div>
-                                <h5 class="rs-blog-title underline has-black"> <a href="blog-details.html">
-                                        Interactive technologies in factories and plants</a></h5>
-                                <div class="rs-blog-meta">
-                                    <div class="rs-blog-meta-item">
-                                        <span>
-                                            By
-                                            <a class="rs-blog-meta-author" href="#"> Nayeem</a>
-                                        </span>
-                                    </div>
-                                    <div class="rs-blog-meta-item">
-                                        <span>
-                                            Feb 8, 2024
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="rs-blog-btn-wrapper">
-                                    <span class="rs-blog-meta-text">22 min read</span>
-                                    <a class="rs-square-btn has-icon has-light-grey" href="blog-details.html">
-                                        <span class="icon-box">
-                                            <i class="ri-arrow-right-line icon-first"></i>
-                                            <i class="ri-arrow-right-line icon-second"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- blog area end -->
 
         <div class="rs-brand-thumb-wrapper">
             <div class="rs-brand-bg-thumb" data-background="assets/images/bg/brand-bg-02.png"></div>
@@ -2297,7 +1978,7 @@ $(document).ready(function() {
                                         <form action="#">
                                             <div class="rs-cta-input">
                                                 <input id="name" name="name" type="text" placeholder="Enter Your Email">
-                                                <button type="submit" class="rs-btn has-theme-red has-icon">
+                                                <button type="submit" class="rs-btn has-theme-orange has-icon">
                                                     Subscribe Now
                                                     <span class="icon-box">
                                                         <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
@@ -2339,7 +2020,7 @@ $(document).ready(function() {
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div class="rs-footer-widget footer-2-col-1">
                                 <div class="rs-footer-widget-logo mb-25">
-                                    <a href="index.html"><img src="assets/images/logo/logo-red.png" alt="logo"></a>
+                                    <a href="index.html"><img src="assets/bapl/logo.png" alt="logo"></a>
                                 </div>
                                 <div class="rs-footer-widget-content">
                                     <p class="rs-footer-widget-description">
@@ -2348,7 +2029,7 @@ $(document).ready(function() {
                                         Ipsums.
                                     </p>
                                     <div class="rs-footer-widget-stroke-text">
-                                        <h3 class="rs-footer-stroke-text has-theme-red">Since 2007</h3>
+                                        <h3 class="rs-footer-stroke-text has-theme-orange">Since 2002</h3>
                                     </div>
                                 </div>
                             </div>
@@ -2357,16 +2038,14 @@ $(document).ready(function() {
                             <div class="rs-footer-widget footer-2-col-2">
                                 <h5 class="rs-footer-widget-title">Useful Links</h5>
                                 <div class="rs-footer-widget-content">
-                                    <div class="rs-footer-widget-links has-theme-red">
+                                    <div class="rs-footer-widget-links has-theme-orange">
                                         <ul>
                                             <li> <a href="#">About Us</a> </li>
                                             <li><a href="#">Projects</a></li>
-                                            <li><a href="#">Careers</a></li>
+                                            <li><a href="#">Products</a></li>
                                             <li><a href="#">Blog</a></li>
                                             <li><a href="#">Privacy Policy</a></li>
                                             <li><a href="#">Services</a></li>
-                                            <li><a href="#">Pricing</a></li>
-                                            <li><a href="#">Team</a></li>
                                             <li><a href="#">Contact</a></li>
                                             <li><a href="#">Terms of use</a></li>
                                         </ul>
@@ -2380,14 +2059,14 @@ $(document).ready(function() {
                                 <div class="rs-footer-widget-content">
                                     <div class="rs-footer-widget-meta">
                                         <div class="rs-footer-widget-address">
-                                            <a target="_blank" href="https://www.google.com/maps">42 Mamnoun Street,
-                                                Saba Carpet
-                                                and Antiques Store, UK</a>
+                                            <a target="_blank" href="https://www.google.com/maps">BALAJI AUTOTECH
+                                                PRIVATE LIMITED Plot No-23,Road No-5,3rd Phase Koorgalli Industrial Area
+                                                MYSORE 570018 KARNATAKA, INDIA</a>
                                         </div>
                                         <h5 class="rs-footer-widget-title">Email Address</h5>
                                         <p> Interested in working with us?</p>
                                         <div class="rs-footer-widget-email">
-                                            <a href="mailto:industrie@gmail.com">industrie@gmail.com</a>
+                                            <a href="mailto:sales@balajiautotech.com">sales@balajiautotech.com</a>
                                         </div>
                                     </div>
                                 </div>
@@ -2400,16 +2079,16 @@ $(document).ready(function() {
                                     <div class="rs-footer-widget-contact-info">
                                         <div class="rs-footer-widget-number">
                                             <span>
-                                                <a href="tel:971551579261">+971 551 579 261</a>
+                                                <a href="tel:971551579261">+91 94498 61404</a>
                                             </span>
                                             <span>
-                                                <a href="tel:971551579261">+97 155 596 1659</a>
+                                                <a href="tel:971551579261"> +91821-2403906</a>
                                             </span>
                                         </div>
                                     </div>
                                     <h5 class="rs-footer-widget-title">Follow Us</h5>
                                     <div class="rs-footer-widget-social">
-                                        <div class="rs-theme-social has-theme-red">
+                                        <div class="rs-theme-social has-theme-orange">
                                             <a href="#"><i class="ri-twitter-x-line"></i></a>
                                             <a href="#"><i class="ri-facebook-fill"></i></a>
                                             <a href="#"><i class="ri-linkedin-fill"></i></a>
@@ -2426,9 +2105,9 @@ $(document).ready(function() {
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-12">
-                            <div class="rs-footer-copyright has-theme-red text-center">
-                                <p class="underline">© <span id="year">2025</span> Industrie. Designed by <a
-                                        href="https://rstheme.com/">RSTheme</a></p>
+                            <div class="rs-footer-copyright has-theme-orange text-center">
+                                <p class="underline">© <span id="year">2025</span> Balaji Autotech PVT. LTD. All Rights
+                                    Reserved</p>
                             </div>
                         </div>
                     </div>
@@ -2440,7 +2119,7 @@ $(document).ready(function() {
 
     <!-- back to top -->
     <!-- Backtotop start -->
-    <div class="backtotop-wrap cursor-pointer has-theme-red">
+    <div class="backtotop-wrap cursor-pointer has-theme-orange">
         <svg class="backtotop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
@@ -2476,8 +2155,8 @@ $(document).ready(function() {
     <script src="assets/js/vendor/purecounter.js"></script>
     <script src="assets/js/vendor/odometer.min.js"></script>
     <script src="assets/js/main.js"></script>
+
 </body>
 
 
-<!-- Mirrored from industrie.rstheme.com/html/metallurgy.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Dec 2025 13:44:51 GMT -->
 </html>
