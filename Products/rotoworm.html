@@ -54,7 +54,7 @@
                 <div class="rs-header-inner">
                     <div class="rs-header-left">
                         <div class="rs-header-logo">
-                            <a href="/index.html"><img src="assets/bapl/logo.png" alt="logo"></a>
+                            <a href="/index.html"><img src="../assets/bapl/logo.png" alt="logo"></a>
                         </div>
                     </div>
                     <div class="rs-header-menu">
@@ -65,12 +65,12 @@
                                 </li>
                                 <!-- about menu -->
                                 <li class="Onepage-menu">
-                                    <a href="about.html">About Us</a>
+                                    <a href="../about.html">About Us</a>
                                 </li>
 
                                 <!--  product -->
                                 <li class="proarc-products-menu proarc-has-arrow">
-                                    <a href="Products.html" class="proarc-trigger">Products</a>
+                                    <a href="../Products.html" class="proarc-trigger">Products</a>
                                     <div class="proarc-megamenu-full">
                                         <div class="proarc-menu-grid">
 
@@ -105,7 +105,7 @@
                                                    
                                                 </ul>
                                                 <br>
-                                                <a href="Products.html" class="proarc-ghost-btn">
+                                                <a href="../Products.html" class="proarc-ghost-btn">
                                                     View All Products <span>&rarr;</span>
                                                 </a>
                                             </div>
@@ -133,7 +133,7 @@
                                     <a href="javascript:void(0)">Blog</a>
                                 </li> -->
                                 <li class="Onepage-menu">
-                                    <a href="contact.html">Contact</a>
+                                    <a href="../contact.html">Contact</a>
                                 </li>
                             </ul>
                         </nav>
@@ -451,7 +451,7 @@
 
         <!-- breadcrumb area start -->
        <section class="rs-breadcrumb-area rs-breadcrumb-one p-relative">
-    <div class="rs-breadcrumb-bg" data-background="/assets/images/pro.png"></div>
+    <div class="rs-breadcrumb-bg" data-background="../assets/images/pro.png"></div>
     <div class="container">
         <div class="row">
             <div class="col-xxl-6 col-xl-8 col-lg-8">
@@ -462,7 +462,7 @@
                     <div class="rs-breadcrumb-menu">
                         <nav>
                             <ul>
-                                <li><span><a href="/Products.html">Products</a></span></li>
+                                <li><span><a href="../Products.html">Products</a></span></li>
                                 <li><span>ROTOWORM - CNC Worm Milling</span></li>
                             </ul>
                         </nav>
@@ -480,7 +480,7 @@
                 <div class="product-details-thumb-wrap">
                     <div class="product-details-thumb-top mb-10">
                         <div class="product-details-thumb">
-                            <img src="/assets/products_Bapl/BAPL PRODUCTS/Rotoworm.jpg" alt="ROTOWORM CNC Worm Milling Machine" loading="lazy">
+                            <img src="../assets/products_Bapl/BAPL PRODUCTS/Rotoworm.jpg" alt="ROTOWORM CNC Worm Milling Machine" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -513,24 +513,43 @@
                         </div>
                     </div>
 
-                    <div id="downloadFormModal" class="bapl-modal" style="display:none;">
-                        <div class="bapl-modal-content">
-                            <div class="modal-header-pro">
-                                <h4>Request Technical Specifications</h4>
-                                <p>Provide your details to access the ROTOWORM industrial catalog.</p>
-                            </div>
-                            <form id="brochureForm" action="INSERT_YOUR_GOOGLE_SCRIPT_URL_HERE" method="POST">
-                                <div class="input-group-pro"><label>Full Name *</label><input type="text" name="name" required></div>
-                                <div class="input-group-pro"><label>Company Name *</label><input type="text" name="company" required></div>
-                                <div class="input-group-pro"><label>Corporate Email *</label><input type="email" name="email" required></div>
-                                <div class="input-group-pro"><label>Contact Number *</label><input type="text" name="phone" required></div>
-                                <div class="modal-footer-pro">
-                                    <button type="submit" class="rs-btn has-theme-orange w-100 mb-10">Submit & Download</button>
-                                    <button type="button" id="closeModal" class="btn-cancel">Cancel</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                   <div id="downloadFormModal" class="bapl-modal" style="display:none;">
+    <div class="bapl-modal-content">
+        <div class="modal-header-pro">
+            <h4>Request Technical Brochure</h4>
+            <p>Please provide your details to initiate the download.</p>
+        </div>
+        <form id="brochureForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="ffa8afa1-03c0-481b-8490-089574ca7f4d">
+            <input type="hidden" name="subject" value="New Brochure Request: HAVIS CNC Plasma">
+
+            <div class="input-group-pro">
+                <label>Full Name *</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="input-group-pro">
+                <label>Company Name *</label>
+                <input type="text" name="company" placeholder="Enter your organization" required>
+            </div>
+
+            <div class="input-group-pro">
+                <label>Corporate Email *</label>
+                <input type="email" name="email" placeholder="email@company.com" required>
+            </div>
+
+            <div class="input-group-pro">
+                <label>Contact Number *</label>
+                <input type="text" name="phone" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+
+            <div class="modal-footer-pro">
+                <button type="submit" class="rs-btn has-theme-orange w-100 mb-10">Submit & Download</button>
+                <button type="button" id="closeModal" class="btn-cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
 
                     <div class="product-details-categories product-details-more mb-5">
                         <p>Applications:</p>
@@ -700,7 +719,7 @@
                                             <li><a href="#">Projects</a></li>
                                             <li><a href="../Products.html">Products</a></li>
                                             <li><a href="#">Privacy Policy</a></li>
-                                            <li><a href="#">Services</a></li>
+                                            <li><a href="../services.html">Services</a></li>
                                             <li><a href="../contact.html">Contact</a></li>
                                             <li><a href="#">Terms of use</a></li>
                                         </ul>
